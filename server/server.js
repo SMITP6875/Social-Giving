@@ -25,7 +25,7 @@ app.use(express.json());
 app.post('/api/create-checkout-session', async (req, res) => {
     try {
         const { amount } = req.body;
-        
+
         const domainURL = process.env.ORIGIN || `http://localhost:5173`;
 
         const session = await stripe.checkout.sessions.create({
