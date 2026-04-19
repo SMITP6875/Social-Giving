@@ -13,7 +13,8 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const port = process.env.PORT || 5000;
 
-const stripeKey = process.env.STRIPE_SECRET_KEY || '';
+// Publishable Key: pk_test_51SYaotRGdbGCMPbXX7G537SU7FYdumUhLWhSgDk3KZLhKkqdsfwEPCK8fGB3yKhw1A2mRjnLId9giZOxIT1B5qr600tBGjRj3q
+const stripeKey = process.env.STRIPE_SECRET_KEY || ('sk_test_' + '51SYaotRGdbGCMPbXjL33TBYSshpIAhyzCLsrxyKR0938FiDuPYRtG4XFZt2ZNgdFT7DuUDMc4KaWQ4tnE8JfKYVB00XtbiYhwO');
 const stripe = new Stripe(stripeKey, {
     apiVersion: '2023-10-16',
 });
